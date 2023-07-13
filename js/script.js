@@ -25,7 +25,7 @@ if (inputPhone) {
   phone.onpaste = cleanPhoneNumber;
 }
 
-let slider = document.querySelector(".horizenScroll");
+let horizenScroll = document.querySelector(".horizenScroll");
 let isDown = false;
 let startX;
 let scrollLeft;
@@ -36,27 +36,27 @@ links.forEach((element) => {
     e.preventDefault();
   });
 });
-slider.addEventListener("mousedown", (e) => {
+horizenScroll.addEventListener("mousedown", (e) => {
   isDown = true;
-  slider.classList.add("active");
-  startX = e.pageX - slider.offsetLeft;
-  scrollLeft = slider.scrollLeft;
+  horizenScroll.classList.add("active");
+  startX = e.pageX - horizenScroll.offsetLeft;
+  scrollLeft = horizenScroll.scrollLeft;
 });
-slider.addEventListener("mouseleave", () => {
+horizenScroll.addEventListener("mouseleave", () => {
   isDown = false;
-  slider.classList.remove("active");
+  horizenScroll.classList.remove("active");
 });
-slider.addEventListener("mouseup", () => {
+horizenScroll.addEventListener("mouseup", () => {
   isDown = false;
-  slider.classList.remove("active");
+  horizenScroll.classList.remove("active");
 });
 
-slider.addEventListener("mousemove", (e) => {
+horizenScroll.addEventListener("mousemove", (e) => {
   if (!isDown) return;
   e.preventDefault();
-  const x = e.pageX - slider.offsetLeft;
+  const x = e.pageX - horizenScroll.offsetLeft;
   const walk = (x - startX) * 1; //scroll-fast
-  slider.scrollLeft = scrollLeft - walk;
+  horizenScroll.scrollLeft = scrollLeft - walk;
 });
 
 
