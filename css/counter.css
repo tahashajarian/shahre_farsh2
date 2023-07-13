@@ -149,8 +149,12 @@ main {
 /* section__1 */
 
 .section__1__container {
-  background: radial-gradient(30% 35% at 50% 30%, #ff9498 0%, #233D83 100%),
-    #233D83;
+  background: radial-gradient(
+      60.93% 53.73% at 32.68% 49.95%,
+      #318bf4 0%,
+      #223c83 100%
+    ),
+    #cd2028;
   /* border: 1px solid; */
   min-height: 100vh;
   position: relative;
@@ -196,7 +200,7 @@ main {
   border: 1px solid #b1b1b1;
   background: #f6f6f6;
   box-shadow: 0px 7px 12px -3px rgba(38, 50, 56, 0.36);
-  color: #233D83;
+  color: #233d83;
   text-align: right;
   font-size: 1.875rem;
   font-family: IRANYekanBold;
@@ -321,7 +325,7 @@ main {
 }
 .section__2__title::after {
   height: 1.38rem;
-  background: #233D83;
+  background: #233d83;
   width: 100%;
   content: " ";
   display: flex;
@@ -593,7 +597,7 @@ main {
   flex-shrink: 0;
   border-radius: 16px;
   border: 1px solid #999;
-  background: #233D83;
+  background: #233d83;
   color: #fff;
   text-align: center;
   font-size: 1.75rem;
@@ -698,7 +702,6 @@ input[type="number"] {
   right: 12rem;
   animation-delay: 1s;
 }
-
 
 /* end section 2 */
 
@@ -905,7 +908,7 @@ footer {
     padding-right: 0.2rem;
   }
   .section__1__container {
-    background: #233D83;
+    background: #233d83;
   }
   .section__2__notch {
     width: 90%;

@@ -221,6 +221,39 @@ main {
   letter-spacing: normal;
 }
 
+.section__1__counter {
+  max-width: var(--xl);
+  margin: auto;
+  padding-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  flex-direction: column-reverse;
+  justify-content: center;
+  padding-top: 1rem;
+  height: 100%;
+  width: 100%;
+}
+
+.section__1__counter .section__1__image {
+  max-width: 450px;
+}
+
+.section__1__desc__greating {
+  color: #fff;
+  text-align: center;
+  font-size: 2rem;
+  font-family: IRANYekanBold;
+  font-weight: 700;
+  line-height: 139%;
+}
+
+.section__1__desc__greating .highlight {
+  width: auto;
+  font-size: 2rem;
+  padding: 0.2rem 1rem;
+  height: unset;
+}
+
 .section__1__desc {
   /* text-align: justify; */
   padding: 1rem;
@@ -274,6 +307,35 @@ main {
   line-height: normal;
   letter-spacing: -3px;
   display: block;
+}
+
+.section__1__desc button {
+  width: 12rem;
+  height: 4rem;
+  flex-shrink: 0;
+  border-radius: 16px;
+  border: 1px solid #b1b1b1;
+  background: #f6f6f6;
+  box-shadow: 0px 7px 12px -3px rgba(38, 50, 56, 0.36);
+  color: #233d83;
+  text-align: right;
+  font-size: 1.875rem;
+  font-family: IRANYekanBold;
+  font-weight: 1000;
+  line-height: 117.5%;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.3s;
+  margin: 3rem 2rem;
+}
+
+.section__1__desc button:hover {
+  box-shadow: 8px 10px 30px 7px rgba(38, 50, 56, 0.36);
+}
+
+.section__1__desc__greating__buttons {
+  display: flex;
+  justify-content: center;
 }
 
 .scrollIcon__container {
@@ -358,6 +420,72 @@ main {
   top: 15rem;
   right: 20rem;
   animation-delay: 1s;
+}
+
+.section__2__timeLeftText {
+  color: #fff;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 139%;
+  z-index: 11;
+  margin-bottom: 0.5rem;
+}
+
+.counter_container {
+  text-align: center;
+  direction: ltr;
+  padding-bottom: 7rem;
+}
+
+#counter > span > span {
+  color: #fff;
+  text-align: center;
+  font-family: IranYekanBold;
+  font-size: 3.57863rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 139%;
+  width: 3.79138rem;
+  height: 5.68706rem;
+  flex-shrink: 0;
+  border-radius: 0.92019rem;
+  background: linear-gradient(360deg, #233d83 0%, #318bf4 100%);
+  box-shadow: 7.098782539367676px 2.5813753604888916px 7.744126796722412px -1.936031699180603px
+    rgba(0, 0, 0, 0.45);
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0.5rem;
+}
+
+#counter > span {
+  position: relative;
+}
+
+#counter > span:first-child > span {
+  background: linear-gradient(360deg, #cd2028 0%, #eb5757 100%);
+  box-shadow: 7.098782539367676px 2.5813753604888916px 7.744126796722412px -1.936031699180603px
+    rgba(0, 0, 0, 0.45);
+}
+
+.counter__label {
+  position: absolute;
+  bottom: -4rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.colon {
+  display: inline-flex;
+  margin: 0 0.4rem;
+  position: relative;
+  background: url(../assets/images/numbers/colon.svg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 1rem;
+  height: 2.5rem;
 }
 
 /* .image-shadow {
@@ -1230,11 +1358,43 @@ footer {
   .verticalScrollable {
     height: 16rem;
   }
+  .section__1__desc button {
+    margin: 1rem;
+    margin-top: 2rem;
+  }
+  #counter > span > span {
+    font-size: 2.5rem;
+    width: 2.4rem;
+    height: 3.8rem;
+    border-radius: 0.5rem;
+  }
+  .colon {
+    margin: 0 0.2rem;
+    width: 0.5rem;
+    height: 1.4rem;
+  }
+  .counter__label {
+    bottom: -3rem;
+  }
 }
 
 @media only screen and (max-width: 500px) {
   .verticalScrollable {
     height: 17rem;
+  }
+  #counter > span > span {
+    font-size: 2.2rem;
+    width: 2.2rem;
+    height: 3rem;
+    border-radius: 0.2rem;
+  }
+  .colon {
+    margin: 0 0.1rem;
+    width: 0.2rem;
+    height: 0.8rem;
+  }
+  .counter__label {
+    bottom: -2.2rem;
   }
 }
 
@@ -1312,14 +1472,43 @@ footer {
   .verticalScrollable__item__text {
     font-size: 1.6rem;
   }
-.verticalScrollable__item__tag {
-  margin-right: 0.5rem;
-}
-
+  .verticalScrollable__item__tag {
+    margin-right: 0.5rem;
+  }
+  .section__1__desc button {
+    margin: 0.6rem;
+    height: 3.6rem;
+    width: 8rem;
+    border-radius: 0.5rem;
+    font-size: 1.5rem;
+    margin-top: 1.5rem;
+  }
+  #counter > span > span {
+    font-size: 2rem;
+    width: 2rem;
+    height: 3rem;
+    border-radius: 0.2rem;
+    margin: 0.3rem;
+  }
+  .colon {
+    margin: 0 0.1rem;
+    width: 0.2rem;
+    height: 0.8rem;
+  }
+  .counter__label {
+    bottom: -2.2rem;
+  }
 }
 @media only screen and (max-width: 380px) {
   .verticalScrollable {
     height: 20rem;
+  }
+  #counter > span > span {
+    font-size: 1.8rem;
+    width: 1.6rem;
+    height: 2.8rem;
+    border-radius: 0.2rem;
+    margin: 0.2rem;
   }
 }
 
