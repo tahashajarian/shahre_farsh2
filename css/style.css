@@ -1530,6 +1530,7 @@ footer {
   }
   .verticalScrollable__item {
     padding: 2rem 2rem;
+    border-radius: 2.25rem;
   }
   .verticalScrollable {
     height: 16rem;
