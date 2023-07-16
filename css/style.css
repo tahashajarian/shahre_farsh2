@@ -1284,6 +1284,9 @@ footer {
   .section__2 .bubble3 {
     right: 1rem;
   }
+  .content {
+    margin-right: 0rem;
+  }
 }
 
 @media only screen and (max-width: 960px) {
@@ -1408,6 +1411,9 @@ footer {
 
   .horizenScroll__container__title__curve {
     top: -6rem;
+  }
+  .content {
+    margin-right: 0rem;
   }
 }
 
