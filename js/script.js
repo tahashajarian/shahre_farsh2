@@ -36,6 +36,12 @@ arrow1.onclick = function () {
   horizenScroll.scrollBy(-200, 0);
 };
 
+const arrowRight1 = document.querySelector("#horizenScrollArrowRight");
+arrowRight1.onclick = function () {
+  // const left = document.querySelector(".scroll-images");
+  horizenScroll.scrollBy(200, 0);
+};
+
 const links = document.querySelectorAll(".card");
 links.forEach((element) => {
   element.addEventListener("mousedown", function (e) {
@@ -74,6 +80,12 @@ const arrow2 = document.querySelector("#horizenScrollArrow2");
 arrow2.onclick = function () {
   // const left = document.querySelector(".scroll-images");
   slider2.scrollBy(-200, 0);
+};
+
+const arrowRight2 = document.querySelector("#horizenScrollArrow2Right");
+arrowRight2.onclick = function () {
+  // const left = document.querySelector(".scroll-images");
+  slider2.scrollBy(200, 0);
 };
 
 const links2 = document.querySelectorAll(".product");
@@ -145,16 +157,22 @@ horizenScroll.onscroll = (e) => {
   } else {
     arrow1.style.opacity = 1;
   }
+  if (horizenScroll.scrollLeft === 0) {
+    arrowRight1.style.opacity = 0.2;
+  } else {
+    arrowRight1.style.opacity = 1;
+  }
 };
 
-
 slider2.onscroll = (e) => {
-  if (
-    slider2.clientWidth - slider2.scrollWidth ===
-    slider2.scrollLeft
-  ) {
+  if (slider2.clientWidth - slider2.scrollWidth === slider2.scrollLeft) {
     arrow2.style.opacity = 0.2;
   } else {
     arrow2.style.opacity = 1;
+  }
+  if (slider2.scrollLeft === 0) {
+    arrowRight2.style.opacity = 0.2;
+  } else {
+    arrowRight2.style.opacity = 1;
   }
 };

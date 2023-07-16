@@ -238,7 +238,7 @@ main {
 }
 
 .section__1__counter .section__1__image {
-  max-width: 400px;
+  max-width: 375px;
   margin: 0;
 }
 
@@ -507,7 +507,7 @@ main {
   background-position: center;
   background-repeat: no-repeat;
   width: 1rem;
-  height: 2.5rem;
+  height: 2.555rem;
 }
 
 /* .image-shadow {
@@ -787,6 +787,13 @@ input[type="number"] {
     rgba(34, 60, 131, 0.4);
 }
 
+.horizenScrollArrowRight {
+  /* cursor: pointer;
+  width: 4rem; */
+  transform: rotate(180deg);
+  opacity: 0.2;
+}
+
 .horizenScroll__container__title {
   display: flex;
   flex-direction: column;
@@ -1051,6 +1058,11 @@ input[type="number"] {
   cursor: pointer;
 }
 
+.products__container__arrowRight {
+  transform: rotate(180deg);
+  opacity: 0.2;
+}
+
 .product img {
   padding-bottom: 1rem;
   height: auto;
@@ -1064,7 +1076,8 @@ input[type="number"] {
   font-weight: 700;
   line-height: normal;
 }
-.product a {
+.product em {
+  /* border: 1px solid green; */
   color: #318bf4;
   text-align: right;
   font-size: 0.739rem;
@@ -1165,6 +1178,13 @@ footer {
 }
 
 /* end footer */
+
+.animated_svg {
+  border-radius: 50%;
+  position: absolute;
+  width: 10rem;
+  height: 10rem;
+}
 
 /* animations */
 @keyframes scrollIconAnimation {
@@ -1305,12 +1325,14 @@ footer {
     /* height: auto; */
     min-width: unset;
   }
-  .arrowLeft {
+  .arrowLeft,
+  .horizenScrollArrowRight {
     display: none !important;
   }
   .horizenScroll__container {
     flex-direction: column;
     margin-top: 2rem;
+    border-radius: 2.25rem;
   }
 
   .section__1__desc__sm > span:first-child {
@@ -1385,6 +1407,7 @@ footer {
   .section__2 .floating_stuff1 {
     left: 3rem;
     top: -3rem;
+    width: 5rem;
   }
   .section__2 .floating_stuff2 {
     bottom: -3rem;
@@ -1550,9 +1573,40 @@ footer {
     left: 10rem;
     opacity: 0.4;
   }
+  .section__2__form__inputs {
+    padding: 0 3rem;
+  }
+  .section__2__form__inputs input {
+    height: 3.16469rem;
+    border-radius: 0.6rem;
+    font-size: 0.98638rem;
+  }
+  .section__2__form__inputs button {
+    height: 3.16469rem;
+    border-radius: 0.65763rem;
+    font-size: 1.15081rem;
+  }
+  .product {
+    width: 12.90294rem;
+    height: 19.51025rem;
+    border-radius: 1rem;
+    padding: 1.5rem 1rem;
+  }
+  .product img {
+    padding-bottom: 0.5rem;
+  }
+  .product span {
+    font-size: 0.7rem;
+  }
+  .product em {
+    font-size: 0.6rem;
+  }
 }
 
 @media only screen and (max-width: 500px) {
+  .products__container__arrow {
+    margin: 1rem;
+  }
   .verticalScrollable {
     height: 17rem;
   }
@@ -1645,9 +1699,15 @@ footer {
   }
   .verticalScrollable__item__text {
     font-size: 1.6rem;
+    width: 100%;
   }
   .verticalScrollable__item__tag {
     margin-right: 0.5rem;
+    /* width: 25%; */
+  }
+  .verticalScrollable__item {
+    padding-left: 1rem;
+    border-radius: 2.25rem;
   }
   .section__1__desc button {
     margin: 0.6rem;

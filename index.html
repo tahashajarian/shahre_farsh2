@@ -13,13 +13,13 @@
       <section class="section__1__container">
         <header>
           <div>
-            <img src="../assets/icons/logo.svg" alt="شهر فرش" />
+            <img src="./assets/icons/logo.svg" alt="شهر فرش" />
           </div>
           <div class="nav">
             <ul class="nav__menus">
               <li>
                 <a href="" class="nav__menus__route">
-                  <img src="../assets/icons/location.svg" />
+                  <img src="./assets/icons/location.svg" />
                   <span> مسیریابی </span>
                 </a>
               </li>
@@ -31,23 +31,23 @@
               <li class="nav__links--tel">
                 <a href="tel:1655">
                   <span>۱۶۵۵</span>
-                  <img src="../assets/icons/phone.svg" alt="phone" />
+                  <img src="./assets/icons/phone.svg" alt="phone" />
                 </a>
               </li>
               <div>
                 <li class="">
                   <a href="">
-                    <img src="../assets/icons/telegram.svg" alt="telegram" />
+                    <img src="./assets/icons/telegram.svg" alt="telegram" />
                   </a>
                 </li>
                 <li class="nav__links--email">
                   <a href="">
-                    <img src="../assets/icons/envelope.svg" alt="email" />
+                    <img src="./assets/icons/envelope.svg" alt="email" />
                   </a>
                 </li>
                 <li>
                   <a href="">
-                    <img src="../assets/icons/instagram.svg" alt="instagram" />
+                    <img src="./assets/icons/instagram.svg" alt="instagram" />
                   </a>
                 </li>
               </div>
@@ -69,14 +69,14 @@
             <div id="indicator-container"></div>
           </div>
           <!-- <div class="section__1__image">
-            <img src="../assets/images/freezer.png" alt="فرش" />
+            <img src="./assets/images/freezer.png" alt="فرش" />
           </div> -->
           <div class="content">
             <!-- <i data-action="left" class="btn-chevron left bx bx-chevron-left"> <= </i> -->
             <div class="slider">
-              <img class="slider-image" src="../assets/images/pejman.png" />
+              <img class="slider-image" src="./assets/images/pejman.png" />
 
-              <img class="slider-image" src="../assets/images/pejman.png" />
+              <img class="slider-image" src="./assets/images/pejman.png" />
             </div>
             <!-- <i data-action="right" class="btn-chevron right bx bx-chevron-right">=></i> -->
           </div>
@@ -85,9 +85,9 @@
           <div class="scrollIcon__stuff">
             <span>ثبت نام</span>
             <span id="scrollIcon">
-              <img src="../assets/icons/arrow-down.svg" />
+              <img src="./assets/icons/arrow-down.svg" />
             </span>
-            <img class="curveIcon" src="../assets/icons/curve.svg" />
+            <img class="curveIcon" src="./assets/icons/curve.svg" />
           </div>
           <!-- <div class="bubble bubble1"></div> -->
           <!-- <div class="bubble bubble2"></div> -->
@@ -95,18 +95,18 @@
           <!-- <div class="bubble bubble4"></div> -->
           <!-- <img
             class="float gift gift1"
-            src="../assets/images/git.svg"
+            src="./assets/images/git.svg"
             alt="gift"
           /> -->
           <!-- <img
             class="float gift gift2"
-            src="../assets/images/git2.svg"
+            src="./assets/images/git2.svg"
             alt="gift"
           /> -->
         </div>
       </section>
       <section class="section__2">
-        <!-- <img class="section__2__notch" src="../assets/images/section2-bg.png" /> -->
+        <!-- <img class="section__2__notch" src="./assets/images/section2-bg.png" /> -->
         <div class="section__2__title"></div>
         <form class="section__2__form">
           <!-- <div class="bubble bubble2"></div>
@@ -114,17 +114,20 @@
           <div class="bubble bubble4"></div> -->
           <img
             class="floating_stuff floating_stuff1"
-            src="../assets/images/floating_stuff6.svg"
+            src="./assets/images/floating_stuff6.svg"
             alt="floating_stuff"
           />
-          <img
-            class="floating_stuff floating_stuff2"
-            src="../assets/images/floating_stuff7.svg"
-            alt="floating_stuff"
-          />
+
+          <object
+            class="floating_stuff2 animated_svg"
+            type="image/svg+xml"
+            data="./assets/images/floating_stuff7.svg"
+          >
+            <img src="./assets/images/floating_stuff7.svg" />
+          </object>
           <img
             class="floating_stuff floating_stuff3"
-            src="../assets/images/floating_stuff4.svg"
+            src="./assets/images/floating_stuff4.svg"
             alt="floating_stuff"
           />
 
@@ -144,7 +147,7 @@
             <button type="submit">ثبت نام</button>
           </div>
           <div class="message message--success">
-            <img class="message__icon" src="../assets/icons/check.svg" />
+            <img class="message__icon" src="./assets/icons/check.svg" />
             <span class="message__text">
               ثبت نام شما با موفقیت صورت پذیرفت. منتظر تماس کارشناسان ما باشید.
             </span>
@@ -160,16 +163,16 @@
           <div class="horizenScroll__container__title">
             <img
               class="floating_stuff floating_stuff2"
-              src="../assets/images/floating_stuff3.svg"
+              src="./assets/images/floating_stuff3.svg"
               alt="floating_stuff"
             />
             <img
               class="floating_stuff floating_stuff1"
-              src="../assets/images/floating_stuff4.svg"
+              src="./assets/images/floating_stuff4.svg"
               alt="floating_stuff"
             />
             <span class="horizenScroll__container__title__curve">
-              <img class="" src="../assets/icons/curve.svg" />
+              <img class="" src="./assets/icons/curve.svg" />
             </span>
             <span class="horizenScroll__container__title__main"
               >این هفته چه خبره؟!</span
@@ -179,172 +182,191 @@
             >
             <img
               class="horizenScroll__container__title__image"
-              src="../assets/images/gifts.svg"
+              src="./assets/images/gifts.svg"
             />
           </div>
           <div class="horizenScroll__shadow"></div>
+          <div
+            id="horizenScrollArrowRight"
+            class="arrowLeft horizenScrollArrowRight"
+          >
+            <img src="./assets/icons/arrow-left.svg" />
+          </div>
           <div class="horizenScroll">
             <div class="section__cards">
-              <div class="card">
-                <img
-                  class="card__image"
-                  src="../assets/images/cards/card1.png"
-                />
-                <span class="card__text"
-                  >فروش ویژه بدون پیش پرداخت و ضامن
-                </span>
-                <span class="card__status card__status--active">
-                  <span class="card__status__text"> فعال </span>
+              <a href="#">
+                <div class="card">
                   <img
-                    class="card__status__bg"
-                    src="../assets/images/cards/active.png"
+                    class="card__image"
+                    src="./assets/images/cards/card1.png"
                   />
-                  <img
-                    class="card__status__bgb"
-                    src="../assets/images/cards/active-b.png"
-                  />
+                  <span class="card__text"
+                    >فروش ویژه بدون پیش پرداخت و ضامن
+                  </span>
+                  <span class="card__status card__status--active">
+                    <span class="card__status__text"> فعال </span>
+                    <img
+                      class="card__status__bg"
+                      src="./assets/images/cards/active.png"
+                    />
+                    <img
+                      class="card__status__bgb"
+                      src="./assets/images/cards/active-b.png"
+                    />
 
+                    <img
+                      class="card__status__shadow"
+                      src="./assets/images/cards/shadow.png"
+                    />
+                  </span>
+                  <button class="card__button">مشاهده</button>
+                </div>
+              </a>
+              <a href="#">
+                <div class="card">
                   <img
-                    class="card__status__shadow"
-                    src="../assets/images/cards/shadow.png"
+                    class="card__image"
+                    src="./assets/images/cards/card2.png"
                   />
-                </span>
-                <button class="card__button">مشاهده</button>
-              </div>
-              <div class="card">
-                <img
-                  class="card__image"
-                  src="../assets/images/cards/card2.png"
-                />
-                <span class="card__text"
-                  >فروش ویژه و اقساطی انواع کولر گازی
-                </span>
-                <span class="card__status card__status--deactive">
-                  <span class="card__status__text"> غیرفعال </span>
-                  <img
-                    class="card__status__bg"
-                    src="../assets/images/cards/deactive.png"
-                  />
-                  <img
-                    class="card__status__bgb"
-                    src="../assets/images/cards/deactive-b.png"
-                  />
+                  <span class="card__text"
+                    >فروش ویژه و اقساطی انواع کولر گازی
+                  </span>
+                  <span class="card__status card__status--deactive">
+                    <span class="card__status__text"> غیرفعال </span>
+                    <img
+                      class="card__status__bg"
+                      src="./assets/images/cards/deactive.png"
+                    />
+                    <img
+                      class="card__status__bgb"
+                      src="./assets/images/cards/deactive-b.png"
+                    />
 
+                    <img
+                      class="card__status__shadow"
+                      src="./assets/images/cards/shadow.png"
+                    />
+                  </span>
+                  <button class="card__button">مشاهده</button>
+                </div>
+              </a>
+              <a href="#">
+                <div class="card">
                   <img
-                    class="card__status__shadow"
-                    src="../assets/images/cards/shadow.png"
+                    class="card__image"
+                    src="./assets/images/cards/card3.png"
                   />
-                </span>
-                <button class="card__button">مشاهده</button>
-              </div>
-              <div class="card">
-                <img
-                  class="card__image"
-                  src="../assets/images/cards/card3.png"
-                />
-                <span class="card__text"
-                  >فروش ویژه و اقساطی انواع کولر گازی
-                </span>
-                <span class="card__status card__status--active">
-                  <span class="card__status__text"> فعال </span>
-                  <img
-                    class="card__status__bg"
-                    src="../assets/images/cards/active.png"
-                  />
-                  <img
-                    class="card__status__bgb"
-                    src="../assets/images/cards/active-b.png"
-                  />
+                  <span class="card__text"
+                    >فروش ویژه و اقساطی انواع کولر گازی
+                  </span>
+                  <span class="card__status card__status--active">
+                    <span class="card__status__text"> فعال </span>
+                    <img
+                      class="card__status__bg"
+                      src="./assets/images/cards/active.png"
+                    />
+                    <img
+                      class="card__status__bgb"
+                      src="./assets/images/cards/active-b.png"
+                    />
 
+                    <img
+                      class="card__status__shadow"
+                      src="./assets/images/cards/shadow.png"
+                    />
+                  </span>
+                  <button class="card__button">مشاهده</button>
+                </div>
+              </a>
+              <a href="#">
+                <div class="card">
                   <img
-                    class="card__status__shadow"
-                    src="../assets/images/cards/shadow.png"
+                    class="card__image"
+                    src="./assets/images/cards/card1.png"
                   />
-                </span>
-                <button class="card__button">مشاهده</button>
-              </div>
-              <div class="card">
-                <img
-                  class="card__image"
-                  src="../assets/images/cards/card1.png"
-                />
-                <span class="card__text"
-                  >فروش ویژه بدون پیش پرداخت و ضامن
-                </span>
-                <span class="card__status card__status--active">
-                  <span class="card__status__text"> فعال </span>
-                  <img
-                    class="card__status__bg"
-                    src="../assets/images/cards/active.png"
-                  />
-                  <img
-                    class="card__status__bgb"
-                    src="../assets/images/cards/active-b.png"
-                  />
+                  <span class="card__text"
+                    >فروش ویژه بدون پیش پرداخت و ضامن
+                  </span>
+                  <span class="card__status card__status--active">
+                    <span class="card__status__text"> فعال </span>
+                    <img
+                      class="card__status__bg"
+                      src="./assets/images/cards/active.png"
+                    />
+                    <img
+                      class="card__status__bgb"
+                      src="./assets/images/cards/active-b.png"
+                    />
 
+                    <img
+                      class="card__status__shadow"
+                      src="./assets/images/cards/shadow.png"
+                    />
+                  </span>
+                  <button class="card__button">مشاهده</button>
+                </div>
+              </a>
+              <a href="#">
+                <div class="card">
                   <img
-                    class="card__status__shadow"
-                    src="../assets/images/cards/shadow.png"
+                    class="card__image"
+                    src="./assets/images/cards/card2.png"
                   />
-                </span>
-                <button class="card__button">مشاهده</button>
-              </div>
-              <div class="card">
-                <img
-                  class="card__image"
-                  src="../assets/images/cards/card2.png"
-                />
-                <span class="card__text"
-                  >فروش ویژه و اقساطی انواع کولر گازی
-                </span>
-                <span class="card__status card__status--deactive">
-                  <span class="card__status__text"> غیرفعال </span>
-                  <img
-                    class="card__status__bg"
-                    src="../assets/images/cards/deactive.png"
-                  />
-                  <img
-                    class="card__status__bgb"
-                    src="../assets/images/cards/deactive-b.png"
-                  />
+                  <span class="card__text"
+                    >فروش ویژه و اقساطی انواع کولر گازی
+                  </span>
+                  <span class="card__status card__status--deactive">
+                    <span class="card__status__text"> غیرفعال </span>
+                    <img
+                      class="card__status__bg"
+                      src="./assets/images/cards/deactive.png"
+                    />
+                    <img
+                      class="card__status__bgb"
+                      src="./assets/images/cards/deactive-b.png"
+                    />
 
-                  <img
-                    class="card__status__shadow"
-                    src="../assets/images/cards/shadow.png"
-                  />
-                </span>
-                <button class="card__button">مشاهده</button>
-              </div>
-              <div class="card">
-                <img
-                  class="card__image"
-                  src="../assets/images/cards/card3.png"
-                />
-                <span class="card__text"
-                  >فروش ویژه و اقساطی انواع کولر گازی
-                </span>
-                <span class="card__status card__status--active">
-                  <span class="card__status__text"> فعال </span>
-                  <img
-                    class="card__status__bg"
-                    src="../assets/images/cards/active.png"
-                  />
-                  <img
-                    class="card__status__bgb"
-                    src="../assets/images/cards/active-b.png"
-                  />
+                    <img
+                      class="card__status__shadow"
+                      src="./assets/images/cards/shadow.png"
+                    />
+                  </span>
+                  <button class="card__button">مشاهده</button>
+                </div></a
+              >
 
+              <a href="#">
+                <div class="card">
                   <img
-                    class="card__status__shadow"
-                    src="../assets/images/cards/shadow.png"
+                    class="card__image"
+                    src="./assets/images/cards/card3.png"
                   />
-                </span>
-                <button class="card__button">مشاهده</button>
-              </div>
+                  <span class="card__text"
+                    >فروش ویژه و اقساطی انواع کولر گازی
+                  </span>
+                  <span class="card__status card__status--active">
+                    <span class="card__status__text"> فعال </span>
+                    <img
+                      class="card__status__bg"
+                      src="./assets/images/cards/active.png"
+                    />
+                    <img
+                      class="card__status__bgb"
+                      src="./assets/images/cards/active-b.png"
+                    />
+
+                    <img
+                      class="card__status__shadow"
+                      src="./assets/images/cards/shadow.png"
+                    />
+                  </span>
+                  <button class="card__button">مشاهده</button>
+                </div>
+              </a>
             </div>
           </div>
           <div id="horizenScrollArrow" class="arrowLeft">
-            <img src="../assets/icons/arrow-left.svg" />
+            <img src="./assets/icons/arrow-left.svg" />
           </div>
         </div>
       </section>
@@ -353,11 +375,11 @@
         <div class="section__4__title">
           <img
             class="floating_stuff section__4__floating_stuff"
-            src="../assets/images/floating_stuff5.svg"
+            src="./assets/images/floating_stuff5.svg"
             alt="floating_stuff"
           />
           <div class="section__4__title__main">
-            <img src="../assets/icons/curve.svg" />
+            <img src="./assets/icons/curve.svg" />
             <span>از دست ندهید</span>
           </div>
           <div class="section__4__title__sub">اتفاقات جذاب شهر</div>
@@ -366,7 +388,7 @@
           <img
             id="scrollArrowUp"
             class="verticalScrollable__container__arrowUp"
-            src="../assets/icons/scroll-down.svg"
+            src="./assets/icons/scroll-down.svg"
           />
           <div class="verticalScrollable">
             <div class="verticalScrollable__item">
@@ -397,7 +419,7 @@
           <img
             id="scrollArrowDown"
             class="verticalScrollable__container__arrowDown"
-            src="../assets/icons/scroll-down.svg"
+            src="./assets/icons/scroll-down.svg"
           />
         </div>
       </section>
@@ -405,11 +427,11 @@
         <div class="section__4__title">
           <img
             class="floating_stuff section__5__floating_stuff"
-            src="../assets/images/floating_stuff1.svg"
+            src="./assets/images/floating_stuff1.svg"
             alt="floating_stuff"
           />
           <div class="section__4__title__main">
-            <img src="../assets/icons/curve.svg" />
+            <img src="./assets/icons/curve.svg" />
             <span>محصولات پیشنهادی</span>
           </div>
           <div class="section__4__title__sub"></div>
@@ -417,78 +439,84 @@
         <div class="products__container">
           <img
             class="floating_stuff section__5__floating_stuff1"
-            src="../assets/images/floating_stuff2.svg"
+            src="./assets/images/floating_stuff2.svg"
             alt="floating_stuff"
           />
+          <div
+            id="horizenScrollArrow2Right"
+            class="products__container__arrow products__container__arrowRight"
+          >
+            <img src="./assets/icons/arrow-left-gray.svg" />
+          </div>
           <div class="products_scroll">
-            <div class="product">
-              <img src="../assets/images/product1.png" />
+            <a href="#" class="product">
+              <img src="./assets/images/product1.png" />
+              <span>یخچال و فریزر دوقلو 40 فوت دوو</span>
+              <em href="#">یخچال فریزر</em>
+            </a>
+            <a href="#" class="product">
+              <img src="./assets/images/product2.png" />
+              <span>پنکه پارس خزر مدل 4010</span>
+              <em href="#">پنکه </em>
+            </a>
+            <a href="#" class="product">
+              <img src="./assets/images/product3.png" />
+              <span>کولر گازی 48 هزار گری مدل -H48H3 </span>
+              <em href="#">کولر </em>
+            </a>
+            <a href="#" class="product">
+              <img src="./assets/images/product4.png" />
+              <span>ماشین لباسشویی دوو مدل DWK-9000C</span>
+              <em href="#">ماشین لباسشویی </em>
+            </a>
+            <a href="#" class="product">
+              <img src="./assets/images/product1.png" />
               <span>یخچال و فریزر دوقلو 40 فوت دوو</span>
               <a href="#">یخچال فریزر</a>
-            </div>
-            <div class="product">
-              <img src="../assets/images/product2.png" />
+            </a>
+            <a href="#" class="product">
+              <img src="./assets/images/product2.png" />
               <span>پنکه پارس خزر مدل 4010</span>
-              <a href="#">پنکه </a>
-            </div>
-            <div class="product">
-              <img src="../assets/images/product3.png" />
+              <em href="#">پنکه </em>
+            </a>
+            <a href="#" class="product">
+              <img src="./assets/images/product3.png" />
               <span>کولر گازی 48 هزار گری مدل -H48H3 </span>
-              <a href="#">کولر </a>
-            </div>
-            <div class="product">
-              <img src="../assets/images/product4.png" />
+              <em href="#">کولر </em>
+            </a>
+            <a href="#" class="product">
+              <img src="./assets/images/product4.png" />
               <span>ماشین لباسشویی دوو مدل DWK-9000C</span>
-              <a href="#">ماشین لباسشویی </a>
-            </div>
-            <div class="product">
-              <img src="../assets/images/product1.png" />
-              <span>یخچال و فریزر دوقلو 40 فوت دوو</span>
-              <a href="#">یخچال فریزر</a>
-            </div>
-            <div class="product">
-              <img src="../assets/images/product2.png" />
-              <span>پنکه پارس خزر مدل 4010</span>
-              <a href="#">پنکه </a>
-            </div>
-            <div class="product">
-              <img src="../assets/images/product3.png" />
-              <span>کولر گازی 48 هزار گری مدل -H48H3 </span>
-              <a href="#">کولر </a>
-            </div>
-            <div class="product">
-              <img src="../assets/images/product4.png" />
-              <span>ماشین لباسشویی دوو مدل DWK-9000C</span>
-              <a href="#">ماشین لباسشویی </a>
-            </div>
+              <em href="#">ماشین لباسشویی </em>
+            </a>
           </div>
           <div id="horizenScrollArrow2" class="products__container__arrow">
-            <img src="../assets/icons/arrow-left-gray.svg" />
+            <img src="./assets/icons/arrow-left-gray.svg" />
           </div>
         </div>
       </section>
     </main>
 
     <footer>
-      <!-- <img class="footer__notch" src="../assets/images/footer-bg.png" /> -->
+      <!-- <img class="footer__notch" src="./assets/images/footer-bg.png" /> -->
 
       <div class="footer__container">
-        <img class="footer__logo" src="../assets/icons/logo.svg" alt="شهرفرش" />
+        <img class="footer__logo" src="./assets/icons/logo.svg" alt="شهرفرش" />
         <div class="footer__buttons">
           <span class="footer__button footer__button--red">
-            <img src="../assets/icons/location.svg" />
+            <img src="./assets/icons/location.svg" />
             <span>مسیریابی</span>
           </span>
           <span class="footer__button footer__button--blue">
-            <img src="../assets/icons/phone.svg" />
+            <img src="./assets/icons/phone.svg" />
             <span>1655</span>
           </span>
         </div>
         <div class="footer_socials">
-          <a href="#"><img src="../assets/icons/twiter.svg" /></a>
-          <a href="#"><img src="../assets/icons/linkedin.svg" /></a>
-          <a href="#"><img src="../assets/icons/instagram2.svg" /></a>
-          <a href="#"><img src="../assets/icons/aparat.svg" /></a>
+          <a href="#"><img src="./assets/icons/twiter.svg" /></a>
+          <a href="#"><img src="./assets/icons/linkedin.svg" /></a>
+          <a href="#"><img src="./assets/icons/instagram2.svg" /></a>
+          <a href="#"><img src="./assets/icons/aparat.svg" /></a>
         </div>
         <div class="copyRight">
           استفاده از مطالب فروشگاه اینترنتی شهر فرش فقط برای مقاصد غیر تجاری و
