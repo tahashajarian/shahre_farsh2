@@ -9,14 +9,14 @@
 .horizenScroll {
   padding-left: 2rem;
   width: 100%;
-  transition: all 0.1s;
   will-change: transform;
   overflow: hidden;
   overflow-x: auto;
   display: flex;
   justify-content: start;
   align-items: center;
-  direction: ltr;
+  scroll-behavior: smooth;
+  direction: rtl;
 }
 
 .arrowLeft {
@@ -45,7 +45,7 @@
 }
 
 .section__cards {
-  margin: 1rem auto;
+  margin: 1.5rem auto;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -74,9 +74,10 @@
 
 .card__image {
   border-radius: 1rem;
-  width: 12rem;
-  height: 12rem;
+  /* width: 12rem;
+  height: 12rem; */
   /* flex-shrink: 0; */
+  margin: -3px;
 }
 
 .card__text {

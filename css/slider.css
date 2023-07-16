@@ -3,10 +3,19 @@
   position: relative;
   /* width: 750px;
   height: 500px; */
-  width: 400px;
+  width: 535px;
+  height: fit-content;
   overflow: hidden;
   border-radius: 10px;
+  /* border: 1px solid red; */
+
+  margin-top: auto;
 }
+
+.section__1 {
+  height: 100%;
+}
+
 .slider {
   width: inherit;
   height: inherit;
@@ -15,6 +24,14 @@
   align-items: center;
   transition: all 0.75s;
 }
+
+.slider img {
+  /* border: 1px solid blue; */
+  /* height: 100%; */
+  /* height: auto; */
+  min-width: 535px;
+}
+
 .slider-info {
   position: absolute;
   width: auto;

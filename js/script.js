@@ -30,6 +30,12 @@ let isDown = false;
 let startX;
 let scrollLeft;
 
+const arrow1 = document.querySelector("#horizenScrollArrow");
+arrow1.onclick = function () {
+  // const left = document.querySelector(".scroll-images");
+  horizenScroll.scrollBy(-200, 0);
+};
+
 const links = document.querySelectorAll(".card");
 links.forEach((element) => {
   element.addEventListener("mousedown", function (e) {
@@ -59,11 +65,16 @@ horizenScroll.addEventListener("mousemove", (e) => {
   horizenScroll.scrollLeft = scrollLeft - walk;
 });
 
-
 let slider2 = document.querySelector(".products_scroll");
 let isDown2 = false;
 let startX2;
 let scrollLeft2;
+
+const arrow2 = document.querySelector("#horizenScrollArrow2");
+arrow2.onclick = function () {
+  // const left = document.querySelector(".scroll-images");
+  slider2.scrollBy(-200, 0);
+};
 
 const links2 = document.querySelectorAll(".product");
 links2.forEach((element) => {
@@ -93,3 +104,57 @@ slider2.addEventListener("mousemove", (e) => {
   const walk = (x - startX2) * 1; //scroll-fast
   slider2.scrollLeft = scrollLeft2 - walk;
 });
+
+const verticalScrollAble = document.querySelector(".verticalScrollable");
+const vertivalArrowUp = document.querySelector("#scrollArrowUp");
+vertivalArrowUp.onclick = function () {
+  verticalScrollAble.scrollBy(0, -200);
+};
+const vertivalArrowDown = document.querySelector("#scrollArrowDown");
+vertivalArrowDown.onclick = function () {
+  verticalScrollAble.scrollBy(0, 200);
+};
+
+verticalScrollAble.onscroll = (e) => {
+  const scrolltop = verticalScrollAble.scrollTop;
+  if (scrolltop === 0) {
+    vertivalArrowUp.style.opacity = 0.2;
+  } else {
+    vertivalArrowUp.style.opacity = 1;
+  }
+  console.log(
+    scrolltop + verticalScrollAble.clientHeight,
+    verticalScrollAble.scrollHeight
+  );
+  if (
+    scrolltop + 40 + verticalScrollAble.clientHeight >=
+    verticalScrollAble.scrollHeight
+  ) {
+    vertivalArrowDown.style.opacity = 0.2;
+  } else {
+    vertivalArrowDown.style.opacity = 1;
+  }
+};
+
+horizenScroll.onscroll = (e) => {
+  if (
+    horizenScroll.clientWidth - horizenScroll.scrollWidth ===
+    horizenScroll.scrollLeft
+  ) {
+    arrow1.style.opacity = 0.2;
+  } else {
+    arrow1.style.opacity = 1;
+  }
+};
+
+
+slider2.onscroll = (e) => {
+  if (
+    slider2.clientWidth - slider2.scrollWidth ===
+    slider2.scrollLeft
+  ) {
+    arrow2.style.opacity = 0.2;
+  } else {
+    arrow2.style.opacity = 1;
+  }
+};
