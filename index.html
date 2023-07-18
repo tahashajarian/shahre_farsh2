@@ -108,7 +108,7 @@
       <section class="section__2">
         <!-- <img class="section__2__notch" src="./assets/images/section2-bg.png" /> -->
         <div class="section__2__title"></div>
-        <form class="section__2__form">
+        <form class="section__2__form" novalidate onsubmit="return submitForm(event)">
           <!-- <div class="bubble bubble2"></div>
           <div class="bubble bubble3"></div>
           <div class="bubble bubble4"></div> -->
@@ -134,19 +134,24 @@
           <div class="section__2__form__title">
             برای استفاده از این فرصت ثبت نام کنید.
           </div>
-          <div class="section__2__form__inputs">
-            <input placeholder="نام و نام‌خانوادگی" name="name" />
+          <div id="signUpForm" class="section__2__form__inputs">
+            <input
+              placeholder="نام و نام‌خانوادگی"
+              name="name"
+              id="nameInput"
+            />
             <input
               placeholder="شماره موبایل"
               inputmode="numeric"
               name="mobile"
               maxlength="11"
               pattern="\d"
-              id="numberonly"
+              id="phoneInput"
+              required="false"
             />
             <button type="submit">ثبت نام</button>
           </div>
-          <div class="message message--success">
+          <div id="successMessage" class="message message--success">
             <img class="message__icon" src="./assets/icons/check.svg" />
             <span class="message__text">
               ثبت نام شما با موفقیت صورت پذیرفت. منتظر تماس کارشناسان ما باشید.

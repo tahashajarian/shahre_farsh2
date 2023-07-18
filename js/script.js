@@ -1,5 +1,7 @@
-//
-const inputPhone = document.querySelector("#numberonly");
+// form codes
+
+// validate phone number
+const inputPhone = document.querySelector("#phoneInput");
 if (inputPhone) {
   inputPhone.addEventListener("keypress", function (evt) {
     console.log(evt.which);
@@ -8,7 +10,7 @@ if (inputPhone) {
       evt.preventDefault();
     }
   });
-  var phone = document.getElementById("numberonly"),
+  var phone = document.getElementById("phoneInput"),
     cleanPhoneNumber;
 
   cleanPhoneNumber = function (e) {
@@ -25,6 +27,54 @@ if (inputPhone) {
   phone.onpaste = cleanPhoneNumber;
 }
 
+// submitForm
+
+const submitForm = (e) => {
+  e.preventDefault();
+  const nameInput = document.querySelector("#nameInput");
+  const nameValue = nameInput.value;
+  const phoneInput = document.querySelector("#phoneInput");
+  const phoneValue = phoneInput.value;
+  if (nameInput && phoneInput) {
+    // TODO:
+    postData("put server address here", {
+      name: nameValue,
+      phone: phoneValue,
+    }).then((data) => {
+      console.log(data); // JSON data parsed by `data.json()` call
+      if (true) {
+        const successMessage = document.querySelector("#successMessage");
+        successMessage.style.display = "flex";
+      }
+    });
+    console.log({
+      name: nameValue,
+      phone: phoneValue,
+    });
+  }
+};
+
+// post function
+// Example POST method implementation:
+async function postData(url = "", data = {}) {
+  // Default options are marked with *
+  const response = await fetch(url, {
+    method: "POST", // *GET, POST, PUT, DELETE, etc.
+    mode: "cors", // no-cors, *cors, same-origin
+    cache: "no-cache", // *default, no-cache, reload, force-cache, only-if-cached
+    credentials: "same-origin", // include, *same-origin, omit
+    headers: {
+      "Content-Type": "application/json",
+      // 'Content-Type': 'application/x-www-form-urlencoded',
+    },
+    redirect: "follow", // manual, *follow, error
+    referrerPolicy: "no-referrer", // no-referrer, *no-referrer-when-downgrade, origin, origin-when-cross-origin, same-origin, strict-origin, strict-origin-when-cross-origin, unsafe-url
+    body: JSON.stringify(data), // body data type must match "Content-Type" header
+  });
+  return response.json(); // parses JSON response into native JavaScript objects
+}
+
+// sliders codes
 let horizenScroll = document.querySelector(".horizenScroll");
 let isDown = false;
 let startX;
