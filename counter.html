@@ -72,16 +72,27 @@
             src="./assets/images/floating_stuff1.svg"
             alt="floating_stuff"
           />
+          <div id="successMessage" class="counter__message">
+            <img
+              class="counter__message__icon"
+              src="./assets/images/gift.svg"
+            />
+            <span class="counter__message__text">
+              تبریک؛ شما در قرعه کشی شرکت داده شدید
+            </span>
+          </div>
           <div class="section__1__desc">
             <div class="section__1__desc__greating">
               <span class="highlight"> میلاد موسوی </span>
               گرامی، آیا قصد خرید اقساطی از شهر لوازم خانگی را دارید؟
             </div>
             <div class="section__1__desc__greating__buttons">
-              <button>بــــــله</button>
+              <button id="addTolotteryButton">
+                بــــــله
+                <span id="spinner" class="spinnerAddTolottery"></span>
+              </button>
               <button>خیــــر</button>
             </div>
-
             <!-- <span id="scrollIcon">
               <img src="./assets/icons/dot.svg" />
               <img src="./assets/icons/down.svg" />
@@ -180,175 +191,166 @@
           </div>
           <div class="horizenScroll">
             <div class="section__cards">
-              <a href="#">
-                <div class="card">
+              <div class="card">
+                <img
+                  class="card__image"
+                  src="./assets/images/cards/card1.png"
+                />
+                <span class="card__text"
+                  >فروش ویژه بدون پیش پرداخت و ضامن
+                </span>
+                <span class="card__status card__status--active">
+                  <span class="card__status__text"> فعال </span>
                   <img
-                    class="card__image"
-                    src="./assets/images/cards/card1.png"
+                    class="card__status__bg"
+                    src="./assets/images/cards/active.png"
                   />
-                  <span class="card__text"
-                    >فروش ویژه بدون پیش پرداخت و ضامن
-                  </span>
-                  <span class="card__status card__status--active">
-                    <span class="card__status__text"> فعال </span>
-                    <img
-                      class="card__status__bg"
-                      src="./assets/images/cards/active.png"
-                    />
-                    <img
-                      class="card__status__bgb"
-                      src="./assets/images/cards/active-b.png"
-                    />
-
-                    <img
-                      class="card__status__shadow"
-                      src="./assets/images/cards/shadow.png"
-                    />
-                  </span>
-                  <button class="card__button">مشاهده</button>
-                </div>
-              </a>
-              <a href="#">
-                <div class="card">
                   <img
-                    class="card__image"
-                    src="./assets/images/cards/card2.png"
+                    class="card__status__bgb"
+                    src="./assets/images/cards/active-b.png"
                   />
-                  <span class="card__text"
-                    >فروش ویژه و اقساطی انواع کولر گازی
-                  </span>
-                  <span class="card__status card__status--deactive">
-                    <span class="card__status__text"> غیرفعال </span>
-                    <img
-                      class="card__status__bg"
-                      src="./assets/images/cards/deactive.png"
-                    />
-                    <img
-                      class="card__status__bgb"
-                      src="./assets/images/cards/deactive-b.png"
-                    />
 
-                    <img
-                      class="card__status__shadow"
-                      src="./assets/images/cards/shadow.png"
-                    />
-                  </span>
-                  <button class="card__button">مشاهده</button>
-                </div>
-              </a>
-              <a href="#">
-                <div class="card">
                   <img
-                    class="card__image"
-                    src="./assets/images/cards/card3.png"
+                    class="card__status__shadow"
+                    src="./assets/images/cards/shadow.png"
                   />
-                  <span class="card__text"
-                    >فروش ویژه و اقساطی انواع کولر گازی
-                  </span>
-                  <span class="card__status card__status--active">
-                    <span class="card__status__text"> فعال </span>
-                    <img
-                      class="card__status__bg"
-                      src="./assets/images/cards/active.png"
-                    />
-                    <img
-                      class="card__status__bgb"
-                      src="./assets/images/cards/active-b.png"
-                    />
+                </span>
+                <button class="card__button">مشاهده</button>
+              </div>
 
-                    <img
-                      class="card__status__shadow"
-                      src="./assets/images/cards/shadow.png"
-                    />
-                  </span>
-                  <button class="card__button">مشاهده</button>
-                </div>
-              </a>
-              <a href="#">
-                <div class="card">
+              <div class="card">
+                <img
+                  class="card__image"
+                  src="./assets/images/cards/card2.png"
+                />
+                <span class="card__text"
+                  >فروش ویژه و اقساطی انواع کولر گازی
+                </span>
+                <span class="card__status card__status--deactive">
+                  <span class="card__status__text"> غیرفعال </span>
                   <img
-                    class="card__image"
-                    src="./assets/images/cards/card1.png"
+                    class="card__status__bg"
+                    src="./assets/images/cards/deactive.png"
                   />
-                  <span class="card__text"
-                    >فروش ویژه بدون پیش پرداخت و ضامن
-                  </span>
-                  <span class="card__status card__status--active">
-                    <span class="card__status__text"> فعال </span>
-                    <img
-                      class="card__status__bg"
-                      src="./assets/images/cards/active.png"
-                    />
-                    <img
-                      class="card__status__bgb"
-                      src="./assets/images/cards/active-b.png"
-                    />
-
-                    <img
-                      class="card__status__shadow"
-                      src="./assets/images/cards/shadow.png"
-                    />
-                  </span>
-                  <button class="card__button">مشاهده</button>
-                </div>
-              </a>
-              <a href="#">
-                <div class="card">
                   <img
-                    class="card__image"
-                    src="./assets/images/cards/card2.png"
+                    class="card__status__bgb"
+                    src="./assets/images/cards/deactive-b.png"
                   />
-                  <span class="card__text"
-                    >فروش ویژه و اقساطی انواع کولر گازی
-                  </span>
-                  <span class="card__status card__status--deactive">
-                    <span class="card__status__text"> غیرفعال </span>
-                    <img
-                      class="card__status__bg"
-                      src="./assets/images/cards/deactive.png"
-                    />
-                    <img
-                      class="card__status__bgb"
-                      src="./assets/images/cards/deactive-b.png"
-                    />
 
-                    <img
-                      class="card__status__shadow"
-                      src="./assets/images/cards/shadow.png"
-                    />
-                  </span>
-                  <button class="card__button">مشاهده</button>
-                </div></a
-              >
-
-              <a href="#">
-                <div class="card">
                   <img
-                    class="card__image"
-                    src="./assets/images/cards/card3.png"
+                    class="card__status__shadow"
+                    src="./assets/images/cards/shadow.png"
                   />
-                  <span class="card__text"
-                    >فروش ویژه و اقساطی انواع کولر گازی
-                  </span>
-                  <span class="card__status card__status--active">
-                    <span class="card__status__text"> فعال </span>
-                    <img
-                      class="card__status__bg"
-                      src="./assets/images/cards/active.png"
-                    />
-                    <img
-                      class="card__status__bgb"
-                      src="./assets/images/cards/active-b.png"
-                    />
+                </span>
+                <button class="card__button">مشاهده</button>
+              </div>
 
-                    <img
-                      class="card__status__shadow"
-                      src="./assets/images/cards/shadow.png"
-                    />
-                  </span>
-                  <button class="card__button">مشاهده</button>
-                </div>
-              </a>
+              <div class="card">
+                <img
+                  class="card__image"
+                  src="./assets/images/cards/card3.png"
+                />
+                <span class="card__text"
+                  >فروش ویژه و اقساطی انواع کولر گازی
+                </span>
+                <span class="card__status card__status--active">
+                  <span class="card__status__text"> فعال </span>
+                  <img
+                    class="card__status__bg"
+                    src="./assets/images/cards/active.png"
+                  />
+                  <img
+                    class="card__status__bgb"
+                    src="./assets/images/cards/active-b.png"
+                  />
+
+                  <img
+                    class="card__status__shadow"
+                    src="./assets/images/cards/shadow.png"
+                  />
+                </span>
+                <button class="card__button">مشاهده</button>
+              </div>
+
+              <div class="card">
+                <img
+                  class="card__image"
+                  src="./assets/images/cards/card1.png"
+                />
+                <span class="card__text"
+                  >فروش ویژه بدون پیش پرداخت و ضامن
+                </span>
+                <span class="card__status card__status--active">
+                  <span class="card__status__text"> فعال </span>
+                  <img
+                    class="card__status__bg"
+                    src="./assets/images/cards/active.png"
+                  />
+                  <img
+                    class="card__status__bgb"
+                    src="./assets/images/cards/active-b.png"
+                  />
+
+                  <img
+                    class="card__status__shadow"
+                    src="./assets/images/cards/shadow.png"
+                  />
+                </span>
+                <button class="card__button">مشاهده</button>
+              </div>
+
+              <div class="card">
+                <img
+                  class="card__image"
+                  src="./assets/images/cards/card2.png"
+                />
+                <span class="card__text"
+                  >فروش ویژه و اقساطی انواع کولر گازی
+                </span>
+                <span class="card__status card__status--deactive">
+                  <span class="card__status__text"> غیرفعال </span>
+                  <img
+                    class="card__status__bg"
+                    src="./assets/images/cards/deactive.png"
+                  />
+                  <img
+                    class="card__status__bgb"
+                    src="./assets/images/cards/deactive-b.png"
+                  />
+
+                  <img
+                    class="card__status__shadow"
+                    src="./assets/images/cards/shadow.png"
+                  />
+                </span>
+                <button class="card__button">مشاهده</button>
+              </div>
+              <div class="card">
+                <img
+                  class="card__image"
+                  src="./assets/images/cards/card3.png"
+                />
+                <span class="card__text"
+                  >فروش ویژه و اقساطی انواع کولر گازی
+                </span>
+                <span class="card__status card__status--active">
+                  <span class="card__status__text"> فعال </span>
+                  <img
+                    class="card__status__bg"
+                    src="./assets/images/cards/active.png"
+                  />
+                  <img
+                    class="card__status__bgb"
+                    src="./assets/images/cards/active-b.png"
+                  />
+
+                  <img
+                    class="card__status__shadow"
+                    src="./assets/images/cards/shadow.png"
+                  />
+                </span>
+                <button class="card__button">مشاهده</button>
+              </div>
             </div>
           </div>
           <div id="horizenScrollArrow" class="arrowLeft">
@@ -496,6 +498,10 @@
             <img src="./assets/icons/phone.svg" />
             <span>1655</span>
           </span>
+        </div>
+        <div class="footer__qr">
+          <img src="./assets/images/qr.svg" />
+          <span>اشتراک گذاری این صفحه</span>
         </div>
         <div class="footer_socials">
           <a href="#"><img src="./assets/icons/twiter.svg" /></a>

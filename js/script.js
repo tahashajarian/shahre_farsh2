@@ -4,7 +4,6 @@
 const inputPhone = document.querySelector("#phoneInput");
 if (inputPhone) {
   inputPhone.addEventListener("keypress", function (evt) {
-    console.log(evt.which);
     const isPresion = evt.which > 1776 && evt.which < 1786;
     if (evt.which < 48 || (evt.which > 57 && !isPresion)) {
       evt.preventDefault();
@@ -27,32 +26,77 @@ if (inputPhone) {
   phone.onpaste = cleanPhoneNumber;
 }
 
-// submitForm
+// submitForm index.htnl
+
+const nameInput = document.querySelector("#nameInput");
+const phoneInput = document.querySelector("#phoneInput");
+const nameValidateError = document.querySelector("#nameValidateError");
+const phoneValidateError = document.querySelector("#phoneValidateError");
+if (nameInput) {
+  nameInput.onkeydown = () => {
+    if (nameValidateError) nameValidateError.style.visibility = "hidden";
+  };
+}
+if (phoneInput) {
+  phoneInput.onkeydown = () => {
+    if (phoneValidateError) phoneValidateError.style.visibility = "hidden";
+  };
+}
 
 const submitForm = (e) => {
   e.preventDefault();
-  const nameInput = document.querySelector("#nameInput");
+  const submitButton = document.querySelector("#submitButton");
   const nameValue = nameInput.value;
-  const phoneInput = document.querySelector("#phoneInput");
   const phoneValue = phoneInput.value;
-  if (nameInput && phoneInput) {
+  if (!/^[آ-ی ]+$/.test(nameValue)) {
+    nameValidateError.innerHTML = "نام خود را به فارسی بنویسید";
+    return (nameValidateError.style.visibility = "visible");
+  }
+  if (nameValue.length < 4 || nameValue.length > 50) {
+    nameValidateError.innerHTML = "نام حداقل سه کاراکتر باید باشد";
+    return (nameValidateError.style.visibility = "visible");
+  }
+  const phoneNumber = phoneInput.value;
+
+  if (phoneNumber.substring(0, 2) != "09" || phoneNumber.length != 11) {
+    return (phoneValidateError.style.visibility = "visible");
+  }
+  if (nameValue && phoneValue) {
+    const spinner = document.querySelector("#spinner");
+    spinner.style.display = "inline-block";
+    submitButton.disabled = true;
     // TODO:
     postData("put server address here", {
       name: nameValue,
       phone: phoneValue,
     }).then((data) => {
-      console.log(data); // JSON data parsed by `data.json()` call
       if (true) {
         const successMessage = document.querySelector("#successMessage");
-        successMessage.style.display = "flex";
+        successMessage.style.visibility = "visible";
+        spinner.style.display = "none";
       }
-    });
-    console.log({
-      name: nameValue,
-      phone: phoneValue,
     });
   }
 };
+
+// addUserTolottery
+
+const addTolotteryButton = document.querySelector("#addTolotteryButton");
+if (addTolotteryButton) {
+  addTolotteryButton.onclick = () => {
+    const successMessage = document.querySelector("#successMessage");
+    const spinner = document.querySelector("#spinner");
+    spinner.style.display = "inline-block";
+    addTolotteryButton.disabled = true;
+    postData("put server address here", {}).then((data) => {
+      if (true) {
+        console.log("hey clicked successfuly", successMessage);
+        successMessage.style.display = "flex";
+        spinner.style.display = "none";
+      }
+    });
+  };
+}
 
 // post function
 // Example POST method implementation:
@@ -73,7 +117,6 @@ async function postData(url = "", data = {}) {
   });
   return response.json(); // parses JSON response into native JavaScript objects
 }
-
 // sliders codes
 let horizenScroll = document.querySelector(".horizenScroll");
 let isDown = false;
@@ -184,10 +227,7 @@ verticalScrollAble.onscroll = (e) => {
   } else {
     vertivalArrowUp.style.opacity = 1;
   }
-  console.log(
-    scrolltop + verticalScrollAble.clientHeight,
-    verticalScrollAble.scrollHeight
-  );
+
   if (
     scrolltop + 40 + verticalScrollAble.clientHeight >=
     verticalScrollAble.scrollHeight

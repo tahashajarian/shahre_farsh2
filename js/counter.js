@@ -47,8 +47,10 @@ const assignClass = (firstElement, secondElement, number) => {
   secondElement.innerText = Math.floor(number % 10);
 };
 
-let timeLeft = 1342514; // seconds
-const startCounter = () => {
+const startCounter = async () => {
+  // let timeLeft = await getTimeLeft(); // secondsSSS
+  let timeLeft = 1342514; // seconds
+
   const counterDiv = document.querySelector("#counter");
   const dayFirst = document.querySelector("#dayFirst");
   const daySecond = document.querySelector("#daySecond");
@@ -72,3 +74,12 @@ const startCounter = () => {
 };
 
 window.onload = startCounter();
+
+async function getTimeLeft() {
+  // TODO: put address server to get time left here
+  // time shuold be in seconds
+
+  const response = await fetch("put server address here");
+  const timeLeft = await response.json();
+  return timeLeft;
+}
