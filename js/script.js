@@ -1,12 +1,16 @@
 // form codes
 
+// this is for convert persian number to english number
+const p2e = (s) => s.replace(/[۰-۹]/g, (d) => "۰۱۲۳۴۵۶۷۸۹".indexOf(d));
+
 // validate phone number
 const inputPhone = document.querySelector("#phoneInput");
 if (inputPhone) {
   inputPhone.addEventListener("keypress", function (evt) {
-    const isPresion = evt.which > 1776 && evt.which < 1786;
+    const isPresion = evt.which >= 1776 && evt.which < 1786;
     if (evt.which < 48 || (evt.which > 57 && !isPresion)) {
       evt.preventDefault();
+    } else {
     }
   });
   var phone = document.getElementById("phoneInput"),
@@ -66,6 +70,7 @@ if (phoneInput) {
 
 const submitForm = (e) => {
   e.preventDefault();
+  inputPhone.value = p2e(inputPhone.value); // this line convert persian number to english number
   const submitButton = document.querySelector("#submitButton");
   const nameValue = nameInput.value;
   const phoneValue = phoneInput.value;
