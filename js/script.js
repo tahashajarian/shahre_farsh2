@@ -32,14 +32,35 @@ const nameInput = document.querySelector("#nameInput");
 const phoneInput = document.querySelector("#phoneInput");
 const nameValidateError = document.querySelector("#nameValidateError");
 const phoneValidateError = document.querySelector("#phoneValidateError");
+const removeError = (element) => {
+  if (element) element.style.visibility = "hidden";
+};
 if (nameInput) {
   nameInput.onkeydown = () => {
-    if (nameValidateError) nameValidateError.style.visibility = "hidden";
+    removeError(nameValidateError);
+  };
+  nameInput.onchange = () => {
+    removeError(nameValidateError);
+  };
+  nameInput.oninput = () => {
+    removeError(nameValidateError);
+  };
+  nameInput.onpaste = () => {
+    removeError(nameValidateError);
   };
 }
 if (phoneInput) {
   phoneInput.onkeydown = () => {
-    if (phoneValidateError) phoneValidateError.style.visibility = "hidden";
+    removeError(phoneValidateError);
+  };
+  phoneInput.onchange = () => {
+    removeError(phoneValidateError);
+  };
+  phoneInput.oninput = () => {
+    removeError(phoneValidateError);
+  };
+  phoneInput.onpaste = () => {
+    removeError(phoneValidateError);
   };
 }
 
