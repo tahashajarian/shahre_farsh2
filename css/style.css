@@ -26,10 +26,12 @@ html {
   tab-size: 4;
   font-feature-settings: normal;
   font-variation-settings: normal;
+  overflow-x: hidden;
 }
 
 body {
   margin: 0;
+  overflow-x: hidden;
   line-height: inherit;
 }
 *,
@@ -145,6 +147,9 @@ li.nav__links--tel {
 
 .nav__menus li:hover {
   font-weight: 700;
+}
+
+.header__logo {
 }
 
 /* end header */
@@ -1883,6 +1888,9 @@ footer {
   .verticalScrollable__item__text {
     font-size: 1.4rem;
     width: 100%;
+  }
+  header > div > img {
+    width: 80%;
   }
 }
 
