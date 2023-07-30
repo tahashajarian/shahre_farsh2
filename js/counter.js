@@ -49,7 +49,11 @@ const assignClass = (firstElement, secondElement, number) => {
 
 const startCounter = async () => {
   // let timeLeft = await getTimeLeft(); // secondsSSS
-  let timeLeft = 1342514; // seconds
+  const countDownDate = new Date("Aug 8, 2023 02:00:00").getTime();
+  const now = new Date().getTime();
+  const distance = countDownDate - now;
+  let timeLeft = distance / 1000;
+  // let timeLeft = 1342514; // seconds
 
   const counterDiv = document.querySelector("#counter");
   const dayFirst = document.querySelector("#dayFirst");
@@ -67,13 +71,62 @@ const startCounter = async () => {
       assignClass(hourFirst, hourSecond, hour);
       assignClass(minuteFirst, minutSecond, minute);
       assignClass(secondFirst, secondSecond, seconds);
-
       timeLeft = timeLeft - 1;
     }, 1000);
   }
 };
 
-window.onload = startCounter();
+window.onload = () => {
+  startCounter();
+  getUserData();
+};
+
+// user data
+const getUserInfoAPI =
+  "http://5.160.190.58:65501/Contacts/ContactInformations?";
+const addUserTolotteryAPI = "http://5.160.190.58:65501/Contacts/ChangeToWarm?";
+const urlObj = new URL(window.location);
+const cell = urlObj.searchParams.get("cell");
+let firstName = "";
+const elementNameHolder = document.querySelector("#userInfoName");
+const getUserData = () => {
+  const personCategoryId = "ab5b0845-595d-4fef-bd6d-ff11829c611d";
+  const token = "Absdf6913435640fc3472413600rb18d4sd1";
+  fetch(
+    getUserInfoAPI +
+      new URLSearchParams({
+        cell,
+        token,
+        personCategoryId,
+      }),
+    {
+      headers: {
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Headers": "*",
+        "Content-Type": "text/plain; charset=utf-8",
+      },
+      // mode: "no-cors",
+    }
+  )
+    .then((response) => response.text())
+    .then((response) => {
+      console.log(response);
+      const result = response.data || response.body || response;
+      const resultArr = result.split(",");
+      const nameProperty = resultArr[0];
+      firstName = nameProperty.split(":")[1];
+      elementNameHolder.innerText = firstName;
+    })
+
+    .catch((error) => {
+      console.log(error);
+      const templateResult = "firstName:مصطفی,lastName:خالی,cell:09356081903";
+      const resultArr = templateResult.split(",");
+      const nameProperty = resultArr[0];
+      firstName = nameProperty.split(":")[1];
+      elementNameHolder.innerText = firstName;
+    });
+};
 
 async function getTimeLeft() {
   // TODO: put address server to get time left here
@@ -82,4 +135,43 @@ async function getTimeLeft() {
   const response = await fetch("put server address here");
   const timeLeft = await response.json();
   return timeLeft;
+}
+
+const addTolotteryButton = document.querySelector("#addTolotteryButton");
+if (addTolotteryButton) {
+  addTolotteryButton.onclick = () => {
+    const successMessage = document.querySelector("#successMessage");
+    const spinner = document.querySelector("#spinner");
+    spinner.style.display = "inline-block";
+    addTolotteryButton.disabled = true;
+    const personCategoryId = "ab5b0845-595d-4fef-bd6d-ff11829c611d";
+    const token = "Absdf6913435640fc3472413600rb18d4sd1";
+    fetch(
+      addUserTolotteryAPI +
+        new URLSearchParams({
+          cell,
+          token,
+          personCategoryId,
+        }),
+      {
+        headers: {
+          "Access-Control-Allow-Origin": "*",
+          "Access-Control-Allow-Headers": "*",
+          "Content-Type": "text/plain; charset=utf-8",
+        },
+        mode: "no-cors",
+      }
+    )
+      .then((response) => response.text())
+      .then((response) => {
+        console.log(response);
+        successMessage.style.display = "flex";
+        spinner.style.display = "none";
+      })
+
+      .catch((error) => {
+        console.log(error);
+        spinner.style.display = "none";
+      });
+  };
 }

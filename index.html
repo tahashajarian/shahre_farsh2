@@ -7,13 +7,47 @@
     <link rel="stylesheet" href="./css/slider.css" />
     <link rel="stylesheet" href="./css/style.css" />
     <link rel="stylesheet" href="./css/cards.css" />
+    <script>
+      !(function (t, e, n) {
+        (t.yektanetAnalyticsObject = n),
+          (t[n] =
+            t[n] ||
+            function () {
+              t[n].q.push(arguments);
+            }),
+          (t[n].q = t[n].q || []);
+        var a = new Date(),
+          r =
+            a.getFullYear().toString() +
+            "0" +
+            a.getMonth() +
+            "0" +
+            a.getDate() +
+            "0" +
+            a.getHours(),
+          c = e.getElementsByTagName("script")[0],
+          s = e.createElement("script");
+        s.id = "ua-script-fU90gpdI";
+        s.dataset.analyticsobject = n;
+        s.async = 1;
+        s.type = "text/javascript";
+        (s.src =
+          "https://cdn.yektanet.com/rg_woebegone/scripts_v3/fU90gpdI/rg.complete.js?v=" +
+          r),
+          c.parentNode.insertBefore(s, c);
+      })(window, document, "yektanet");
+    </script>
   </head>
   <body>
     <main>
       <section class="section__1__container">
         <header>
           <div>
-            <img class="header__logo" src="./assets/icons/logo.svg" alt="شهر فرش" />
+            <img
+              class="header__logo"
+              src="./assets/icons/logo.svg"
+              alt="شهر فرش"
+            />
           </div>
           <div class="nav">
             <ul class="nav__menus">
@@ -66,21 +100,13 @@
               >
               <span>یخچال فریزر دوقولو بخرید</span>
             </div>
-            <div id="indicator-container"></div>
           </div>
-          <!-- <div class="section__1__image">
-            <img src="./assets/images/freezer.png" alt="فرش" />
-          </div> -->
+
           <div class="content">
-            <!-- <i data-action="left" class="btn-chevron left bx bx-chevron-left"> <= </i> -->
             <div class="slider">
               <img class="slider-image" src="./assets/images/pejman.png" />
-
-              <img class="slider-image" src="./assets/images/pejman1.png" />
             </div>
-            <!-- <i data-action="right" class="btn-chevron right bx bx-chevron-right">=></i> -->
           </div>
-          <div></div>
           <div class="scrollIcon__container"></div>
           <div class="scrollIcon__stuff">
             <span>ثبت نام</span>
@@ -112,6 +138,7 @@
           class="section__2__form"
           novalidate
           onsubmit="return submitForm(event)"
+          id="redisterform"
         >
           <!-- <div class="bubble bubble2"></div>
           <div class="bubble bubble3"></div>
@@ -545,6 +572,5 @@
       </div>
     </footer>
     <script src="./js/script.js"></script>
-    <script src="./js/slider.js"></script>
   </body>
 </html>

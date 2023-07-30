@@ -1,3 +1,11 @@
+//  global const
+
+const registerUrlAddress =
+  "http://5.160.190.58:65501/Contacts/RegisterLandingPage/?";
+
+const categoryId = "ab5b0845-595d-4fef-bd6d-ff11829c611d";
+const token = "Absdf6913435640fc3472413600rb18d4sd";
+
 // form codes
 
 // this is for convert persian number to english number
@@ -67,7 +75,7 @@ if (phoneInput) {
     removeError(phoneValidateError);
   };
 }
-
+// form submit
 const submitForm = (e) => {
   e.preventDefault();
   inputPhone.value = p2e(inputPhone.value); // this line convert persian number to english number
@@ -87,42 +95,44 @@ const submitForm = (e) => {
   if (phoneNumber.substring(0, 2) != "09" || phoneNumber.length != 11) {
     return (phoneValidateError.style.visibility = "visible");
   }
+  const urlObj = new URL(window.location);
+  const utm = urlObj.searchParams;
+  const data = {
+    firstName: nameValue,
+    cell: phoneValue,
+    lastName: "",
+    categoryId,
+    token,
+    utm,
+  };
   if (nameValue && phoneValue) {
     const spinner = document.querySelector("#spinner");
     spinner.style.display = "inline-block";
     submitButton.disabled = true;
-    // TODO:
-    postData("put server address here", {
-      name: nameValue,
-      phone: phoneValue,
-    }).then((data) => {
-      if (true) {
-        const successMessage = document.querySelector("#successMessage");
-        successMessage.style.visibility = "visible";
+    fetch(registerUrlAddress + new URLSearchParams(data), {
+      headers: {
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Headers": "*",
+      },
+      mode: "no-cors",
+    })
+      .then((response) => {
+        console.log(response);
         spinner.style.display = "none";
-      }
-    });
+        
+        if (response) {
+          const successMessage = document.querySelector("#successMessage");
+          successMessage.style.visibility = "visible";
+        }
+      })
+      .catch((error) => {
+        submitButton.disabled = false;
+        console.log(error);
+        spinner.style.display = "none";
+        alert("خطا در فراخوانی سرویس لطفا لحظاتی دیگر مجددا تلاش نمایید.");
+      });
   }
 };
-
-// addUserTolottery
-
-const addTolotteryButton = document.querySelector("#addTolotteryButton");
-if (addTolotteryButton) {
-  addTolotteryButton.onclick = () => {
-    const successMessage = document.querySelector("#successMessage");
-    const spinner = document.querySelector("#spinner");
-    spinner.style.display = "inline-block";
-    addTolotteryButton.disabled = true;
-    postData("put server address here", {}).then((data) => {
-      if (true) {
-        console.log("hey clicked successfuly", successMessage);
-        successMessage.style.display = "flex";
-        spinner.style.display = "none";
-      }
-    });
-  };
-}
 
 // post function
 // Example POST method implementation:
