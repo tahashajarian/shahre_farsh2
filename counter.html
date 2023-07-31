@@ -86,13 +86,28 @@
               <span class="highlight" id="userInfoName"> کاربر </span>
               گرامی، آیا قصد خرید اقساطی از شهر لوازم خانگی را دارید؟
             </div>
-            <div class="section__1__desc__greating__buttons">
-              <button id="addTolotteryButton">
+            <form
+              class="section__1__desc__greating__buttons"
+              method="get"
+              action="http://5.160.190.58:65501/Contacts/ChangeToWarm?"
+            >
+              <button id="addTolotteryButton" type="submit">
                 بــــــله
                 <span id="spinner" class="spinnerAddTolottery"></span>
               </button>
               <button>خیــــر</button>
-            </div>
+              <input type="hidden" name="cell" value="" id="cellInput" />
+              <input
+                name="personCategoryId"
+                type="hidden"
+                value="ab5b0845-595d-4fef-bd6d-ff11829c611d"
+              />
+              <input
+                name="token"
+                type="hidden"
+                value="Absdf6913435640fc3472413600rb18d4sd"
+              />
+            </form>
             <!-- <span id="scrollIcon">
               <img src="./assets/icons/dot.svg" />
               <img src="./assets/icons/down.svg" />

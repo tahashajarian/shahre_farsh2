@@ -76,11 +76,6 @@ const startCounter = async () => {
   }
 };
 
-window.onload = () => {
-  startCounter();
-  getUserData();
-};
-
 // user data
 const getUserInfoAPI =
   "http://5.160.190.58:65501/Contacts/ContactInformations?";
@@ -175,3 +170,5 @@ if (addTolotteryButton) {
       });
   };
 }
+
+startCounter();

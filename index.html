@@ -137,8 +137,9 @@
         <form
           class="section__2__form"
           novalidate
-          onsubmit="return submitForm(event)"
           id="redisterform"
+          action="http://5.160.190.58:65501/Contacts/RegisterLandingPage/?"
+          method="get"
         >
           <!-- <div class="bubble bubble2"></div>
           <div class="bubble bubble3"></div>
@@ -180,18 +181,29 @@
             </span>
             <input
               placeholder="نام و نام‌خانوادگی"
-              name="name"
+              name="firstName"
               id="nameInput"
               maxlength="50"
             />
             <input
               placeholder="شماره موبایل"
               inputmode="numeric"
-              name="mobile"
+              name="cell"
               maxlength="11"
               pattern="\d"
               id="phoneInput"
             />
+            <input
+              name="categoryId"
+              type="hidden"
+              value="ab5b0845-595d-4fef-bd6d-ff11829c611d"
+            />
+            <input
+              name="token"
+              type="hidden"
+              value="Absdf6913435640fc3472413600rb18d4sd"
+            />
+            <input name="utm" type="hidden" value="" id="utmInput" />
             <button type="submit" id="submitButton">
               ثبت نام
               <span id="spinner" class="signupLoding"></span>

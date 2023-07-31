@@ -75,9 +75,30 @@ if (phoneInput) {
     removeError(phoneValidateError);
   };
 }
+
+const getUtmAndCell = () => {
+  const urlObj = new URL(window.location);
+  if (urlObj) {
+    const utm = urlObj.searchParams;
+    const cell = urlObj.searchParams.get("cell");
+    const utmInput = document.querySelector("#utmInput");
+    const cellInput = document.querySelector("#cellInput");
+    if (utmInput) {
+      utmInput.value = utm;
+    }
+    if (cellInput) {
+      cellInput.value = cell;
+    }
+  }
+};
+
+window.onload = () => {
+  getUtmAndCell();
+};
+
 // form submit
 const submitForm = (e) => {
-  e.preventDefault();
+  // e.preventDefault();
   inputPhone.value = p2e(inputPhone.value); // this line convert persian number to english number
   const submitButton = document.querySelector("#submitButton");
   const nameValue = nameInput.value;
@@ -119,7 +140,7 @@ const submitForm = (e) => {
       .then((response) => {
         console.log(response);
         spinner.style.display = "none";
-        
+
         if (response) {
           const successMessage = document.querySelector("#successMessage");
           successMessage.style.visibility = "visible";
